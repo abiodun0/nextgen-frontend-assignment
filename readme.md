@@ -33,7 +33,16 @@ You will need to do the following:
 ```
 Comments:
 ---------
+1. Set up Sass in the project.
+2. Added Bootstrap into the SASS workflow
+3. Added custom variables so that the primary and secondary colors could be changed.
 
+NB: no aboslute imports
+- Added concurrently and lite server to enable live viewing of the project with node server.
+
+Here is the Pull requests
+
+https://github.com/abiodun0/nextgen-frontend-assignment/pull/1
 
 ```
 
@@ -44,7 +53,10 @@ If you have not already noticed, the dropdown does not work on mobile. Investiga
 ```
 Comments:
 ---------
+- The issue was a lack of bootstrap javascript and changing data- to data-bs-* in the CSS classes of the HTML.
+- The fix was using browserify to import the collapse javascript component of Bootstrap, added watchify to watch for live changes.
 
+Here is the pull request with the demo screenshot of the UI working https://github.com/abiodun0/nextgen-frontend-assignment/pull/2
 
 ```
 
@@ -85,8 +97,17 @@ Expectations for this part:
 ```
 Comments:
 ---------
+Added JSON mocked data
+modify the display and add filter functionality for author name and title.
+Added tests with mocha for the functionality
 
+Here is the pull request https://github.com/abiodun0/nextgen-frontend-assignment/pull/3
 
+To use this locally
+Run npm install
+Run npm start
+
+To run the tests run npm test
 ```
 
 ## Part 4: Convert to Vue/Angular/React
@@ -96,7 +117,18 @@ Select your preferred front-end framework and convert everything from Part 3 to 
 ```
 Comments:
 ---------
+- Added react with nx and vite for running tests
+- maintained the same functionality from feature 3
+- added tests
 
+Here is the pull request https://github.com/abiodun0/nextgen-frontend-assignment/pull/4
+
+To test
+cd react-workpace
+npm start
+
+To run tests
+npm test
 
 ```
 
@@ -122,6 +154,10 @@ You need to consider the following requirements:
 ```
 Comments:
 ---------
+- Added Palindrom Logic
+- Added UI with react/Typescript boostrap
+- Added more tests
 
+Here is the pull request https://github.com/abiodun0/nextgen-frontend-assignment/pull/5
 
 ```
