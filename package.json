@@ -2,23 +2,29 @@
   "name": "fed-assessment",
   "version": "1.0.0",
   "description": "",
+  "main": "react/src/index.js",
   "scripts": {
-    "sass": "sass src/scss/main.scss dist/css/main.css",
-    "start": "concurrently \"sass --watch src/scss/main.scss dist/css/main.css\" \"watchify js/main.js -o dist/js/main.js\" \"lite-server\"",
-    "babel": "browserify js/main.js > dist/js/main.js",
-    "test": "mocha tests/test-main.js"
+    "sass": "sass vanilla/src/scss/main.scss vanilla/dist/css/main.css",
+    "start": "concurrently \"sass --watch vanilla/src/scss/main.scss vanilla/dist/css/main.css\" \"watchify vanilla/js/main.js -o vanilla/dist/js/main.js\" \"lite-server\"",
+    "test": "mocha vanilla/tests/test-main.js",
+    "start-react": "cd react-workspace && nx serve react-workspace"
   },
   "devDependencies": {
+    "@nrwl/cli": "^15.9.3",
     "assert": "^2.1.0",
     "browserify": "^17.0.0",
     "concurrently": "^8.2.2",
     "jsdom": "^24.0.0",
     "lite-server": "^2.6.1",
     "mocha": "^10.4.0",
+    "react-scripts": "^5.0.1",
     "sass": "^1.77.0",
     "watchify": "^4.0.0"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "node-sass": "^9.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
