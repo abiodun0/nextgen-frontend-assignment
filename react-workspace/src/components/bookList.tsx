@@ -33,8 +33,7 @@ export const BookList: React.FC = () => {
   };
 
   return (
-    <main>
-      <div className="container">
+      <div className="container" id="bookListing">
         <h1>Book Listing</h1>
         <input
           type="text"
@@ -60,6 +59,5 @@ export const BookList: React.FC = () => {
           ))}
         </div>
       </div>
-    </main>
   );
 };

@@ -1,13 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
 import 'bootstrap/js/dist/collapse.js';
-import { BookList } from '../components/bookList'
+import { BookList } from '../components/bookList';
+import { LongestPalindromeFinder } from '../components/longstPalindromFinder';
 
 function Navigation() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="#header">
           FED Assessment
         </a>
         <button
@@ -24,17 +25,17 @@ function Navigation() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home
+              <a className="nav-link" href="#bookListing">
+                Book Listing
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
+              <a className="nav-link" href="#longestPalindrome">
+                Longest Palindrome
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#footer">
                 Contact
               </a>
             </li>
@@ -47,8 +48,8 @@ function Navigation() {
 
 function Header() {
   return (
-    <header className="jumbotron text-center">
-      <h1 className="display-4">Welcome to FED Assessment</h1>
+    <header className="jumbotron text-center" id="header">
+      <h1>Welcome to FED Assessment</h1>
       <p className="lead">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea repellat
         aliquam quas aliquid, doloribus deleniti minima perferendis rem laborum
@@ -59,11 +60,12 @@ function Header() {
   );
 }
 
-
-
 function Footer() {
   return (
-    <footer className="container-fluid bg-dark text-light text-center py-3">
+    <footer
+      className="container-fluid bg-dark text-light text-center py-3"
+      id="footer"
+    >
       <p>&copy; 2024 FED Assessment. All rights reserved.</p>
     </footer>
   );
@@ -74,7 +76,11 @@ function App() {
     <>
       <Navigation />
       <Header />
-      <BookList />
+      <main>
+        <BookList />
+        <div className="py-5"></div>
+        <LongestPalindromeFinder />
+      </main>
       <div className="py-5"></div>
       <Footer />
     </>
