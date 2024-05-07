@@ -22,7 +22,7 @@ describe('LongestPalindromeFinder', () => {
     });
   });
 
-  it('displays empty result if no palindromic substring is found', async () => {
+  it('displays results even if one palindromic logic is found', async () => {
     const { getByLabelText, getByText, queryByText } = render(
       <LongestPalindromeFinder />
     );
