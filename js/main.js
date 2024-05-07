@@ -1,14 +1,13 @@
 require("../node_modules/bootstrap/js/dist/collapse.js");
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",  () => {
   fetch("../data/books.json")
     .then((response) => response.json())
     .then((data) => {
       displayBooks(data.books);
-      console.log('ever got here???')
       document.getElementById("searchInput").addEventListener(
         "input",
-        debounce(function (event) {
+        debounce((event) => {
           const searchTerm = event.target.value.toLowerCase();
           const filteredBooks = data.books.filter(
             (book) =>
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
               book.author.toLowerCase().includes(searchTerm)
           );
           displayBooks(filteredBooks);
-        }, 1500)
+        }, 250)
       );
     })
     .catch((error) => console.error("Error fetching books:", error));
@@ -36,7 +35,7 @@ const debounce = (fn, delay) => {
   };
 };
 
-function displayBooks(books) {
+const displayBooks = (books) => {
   const bookList = document.getElementById("bookList");
   bookList.innerHTML = "";
   books.forEach((book) => {
