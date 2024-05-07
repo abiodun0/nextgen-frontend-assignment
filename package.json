@@ -4,13 +4,15 @@
   "description": "",
   "scripts": {
     "sass": "sass src/scss/main.scss dist/css/main.css",
-    "start": "concurrently \"sass --watch src/scss/main.scss dist/css/main.css\" \"lite-server\""
-
+    "start": "concurrently \"sass --watch src/scss/main.scss dist/css/main.css\" \"watchify js/main.js -o dist/js/main.js\" \"lite-server\"",
+    "babel": "browserify js/main.js > dist/js/main.js"
   },
   "devDependencies": {
+    "browserify": "^17.0.0",
     "concurrently": "^8.2.2",
     "lite-server": "^2.6.1",
-    "sass": "^1.77.0"
+    "sass": "^1.77.0",
+    "watchify": "^4.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
