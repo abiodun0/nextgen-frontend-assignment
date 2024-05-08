@@ -1,5 +1,4 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
 import 'bootstrap/js/dist/collapse.js';
 import { BookList } from '../components/bookList';
 import { LongestPalindromeFinder } from '../components/longstPalindromFinder';

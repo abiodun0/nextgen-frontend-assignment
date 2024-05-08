@@ -1,5 +1,6 @@
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import { LongestPalindromeFinder } from './longstPalindromFinder';
+import { expect } from 'vitest';
 
 describe('LongestPalindromeFinder', () => {
   it('renders input field and submit button', () => {
