@@ -30,7 +30,6 @@ describe('App', () => {
   });
   it('should render successfully', () => {
     const { baseElement, getByText, getAllByText } = render(<BookList />);
-    // my-test-file.spec.ts
     expect(baseElement).toBeTruthy();
     const booksData = {
       books: [
