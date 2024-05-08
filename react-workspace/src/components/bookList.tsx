@@ -10,7 +10,6 @@ type Book = {
 export const BookList: React.FC = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
     setBooks(booksData.books);
@@ -19,7 +18,6 @@ export const BookList: React.FC = () => {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
-    setSearchTerm(value);
     filterBooks(value);
   };
 
@@ -40,7 +38,6 @@ export const BookList: React.FC = () => {
           id="searchInput"
           className="form-control mb-3"
           placeholder="Search by title or author"
-          value={searchTerm}
           onChange={handleSearchChange}
         />
         <div className="row">

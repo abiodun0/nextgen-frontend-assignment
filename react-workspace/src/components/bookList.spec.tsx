@@ -19,7 +19,7 @@ describe('App', () => {
             year_published: 1854,
           },
           {
-            title: "Tess of the dUrbervilles",
+            title: 'Tess of the dUrbervilles',
             author: 'Thomas Hardy',
             year_published: 1891,
           },
@@ -45,7 +45,7 @@ describe('App', () => {
           year_published: 1854,
         },
         {
-          title: "Tess of the dUrbervilles",
+          title: 'Tess of the dUrbervilles',
           author: 'Thomas Hardy',
           year_published: 1891,
         },
@@ -59,7 +59,9 @@ describe('App', () => {
     });
   });
   it('filters books based on search input on title, case insensitive', async () => {
-    const { getByPlaceholderText, getByText, queryByText } = render(<BookList />);
+    const { getByPlaceholderText, getByText, queryByText } = render(
+      <BookList />
+    );
     const searchInput = getByPlaceholderText('Search by title or author');
     fireEvent.change(searchInput, { target: { value: 'Ayn' } });
     await waitFor(() => {
@@ -67,5 +69,4 @@ describe('App', () => {
       expect(queryByText('Thomas Hardy')).toBeFalsy();
     });
   });
-
 });
